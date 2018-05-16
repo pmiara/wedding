@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'wedding_guests.apps.WeddingGuestsConfig', 
+    'wedding_guests.apps.WeddingGuestsConfig',
 ]
 
 MIDDLEWARE = [
