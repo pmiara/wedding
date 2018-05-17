@@ -3,4 +3,10 @@
 {% block content %}
 <h1>Strona główna</h1>
 <p>Witamy na stronie głównej!</p>
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  <input type="text" name="username">
+  <input type="password" name="password">
+  <input type="submit" value="login" />
+</form>
 {% endblock %}
