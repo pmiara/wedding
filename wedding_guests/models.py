@@ -29,5 +29,9 @@ class Guest(models.Model):
     gift = models.CharField('Prezent', blank=True, max_length=50)
     comments = models.TextField('Dodatkowy komentarz', blank=True, max_length=200)
 
+    @staticmethod
+    def get_similar_gifts(gift):
+        return ', '.join([gift, 'czołg', 'odrzutowiec'])
+
     def __str__(self):
         return '{} {}'.format(self.name, self.surname)

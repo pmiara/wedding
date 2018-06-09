@@ -3,6 +3,8 @@ from django.views.generic.base import TemplateView
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.http import JsonResponse
+
 
 from .forms import LoginForm, GuestFormSet
 from .models import Guest
@@ -38,6 +40,10 @@ class GuestView(LoginRequiredMixin, View):
 
     def post(self, request):
         pass
+
+    def validate_gift(request):
+        similar_gifts = Guest.get_similar_gifts(request.GET.get('gift'))
+        return JsonResponse(similar_gifts, safe=False)
 
 
 def logout_view(request):
