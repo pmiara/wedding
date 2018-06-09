@@ -3,10 +3,14 @@
 {% block content %}
 <h1>Strona główna</h1>
 <p>Witamy na stronie głównej!</p>
-<form method="post" action="{% url 'login' %}">
+{% if user.is_authenticated %}
+<p>Zalogowany jako {{ user.username }}</p>
+<a href="{% url 'logout' %}">Wyloguj</a>
+{% else %}
+<form method="post" action="">
   {% csrf_token %}
-  <input type="text" name="username">
-  <input type="password" name="password">
-  <input type="submit" value="login" />
+  {{ login_form }}
+  <input type="submit" value="Zaloguj" />
 </form>
+{% endif %}
 {% endblock %}
