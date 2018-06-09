@@ -2,11 +2,13 @@ from django.shortcuts import render, redirect
 from django.views.generic.base import TemplateView
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.mixins import LoginRequiredMixin
 
-from .forms import LoginForm
+from .forms import LoginForm, GuestFormSet
+from .models import Guest
 
 
-class Home(View):
+class HomeView(View):
 
     def get(self, request):
         login_form = LoginForm()
@@ -27,8 +29,15 @@ class Home(View):
         return render(request, 'home.html', {'login_form': login_form})
 
 
-class Guest(TemplateView):
-    template_name = 'guest.html'
+class GuestView(LoginRequiredMixin, View):
+
+    def get(self, request):
+        guests = Guest.objects.filter(username=request.user)
+        formset = GuestFormSet(queryset=guests)
+        return render(request, 'guest.html', {'formset': formset})
+
+    def post(self, request):
+        pass
 
 
 def logout_view(request):

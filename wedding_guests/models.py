@@ -13,7 +13,7 @@ class Guest(models.Model):
     name = models.CharField('Imię', max_length=30)
     surname = models.CharField('Nazwisko', max_length=50)
     attending = models.CharField(
-        'Będę na weselu', max_length=5, default=MAYBE, choices=ATTENDING_STATUSES
+        'Będę na weselu', max_length=len(MAYBE), default=MAYBE, choices=ATTENDING_STATUSES
     )
     wants_bus = models.BooleanField(
         'Chcę jechać autobusem',
@@ -26,7 +26,7 @@ class Guest(models.Model):
         default=False,
         help_text='Informacja ta pomoże nam przy wyborze menu'
     )
-    gift = models.CharField('Prezent', blank=True, editable=False, max_length=50)
+    gift = models.CharField('Prezent', blank=True, max_length=50)
     comments = models.TextField('Dodatkowy komentarz', blank=True, max_length=200)
 
     def __str__(self):

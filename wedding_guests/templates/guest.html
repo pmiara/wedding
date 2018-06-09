@@ -2,4 +2,12 @@
 
 {% block content %}
 <h1>Panel gościa</h1>
+{% for guest_form in formset %}
+<h3>{{ guest_form.instance }}</h3>
+<form method="post" action="">
+  {% csrf_token %}
+  {{ guest_form.as_p }}
+  <input type="submit" value="Zaloguj" />
+</form>
+{% endfor %}
 {% endblock %}
