@@ -1,6 +1,23 @@
 @import '_reset';
 
 body {
-  background-image: url("../dab.JPG");
-  background-size: 100%;
+}
+
+#home-header h1 {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 4em;
+  text-align: center;
+  margin: 60px;
+}
+
+.navbar {
+  font-family: 'Berkshire Swash', cursive;
+}
+
+#heart {
+  width: 100%;
+}
+
+#login_form {
+  margin-top: 15px;
 }

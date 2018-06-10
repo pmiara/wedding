@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wedding_guests.apps.WeddingGuestsConfig',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
