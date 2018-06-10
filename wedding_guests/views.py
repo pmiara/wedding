@@ -41,7 +41,10 @@ class GuestView(LoginRequiredMixin, View):
         return render(request, 'guest.html', {'formset': formset})
 
     def post(self, request):
-        pass
+        formset = GuestFormSet(request.POST)
+        if formset.is_valid():
+            formset.save()
+        return redirect('guest')
 
     def validate_gift(request):
         similar_gifts = Guest.get_similar_gifts(request.GET.get('gift'))

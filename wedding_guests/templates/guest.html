@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
+{% for dict in formset.errors %}
+    {% for error in dict.values %}
+        {{ error }}
+    {% endfor %}
+{% endfor %}
+
 <ul class="nav nav-tabs" role="tablist">
 {% for guest_form in formset %}
   <li role="presentation" class="nav-item">
@@ -10,17 +16,19 @@
   </li>
 {% endfor %}
 </ul>
-<div class="tab-content">
-{% for guest_form in formset %}
-  <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
-    <form method="post" action="">
-      {% csrf_token %}
-      {{ guest_form.as_p }}
-      <input type="submit" value="Zaloguj" />
-    </form>
+
+<form method="post" action="">
+{% csrf_token %}
+{{ formset.management_form }}
+  <div class="tab-content">
+  {% for guest_form in formset %}
+    <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
+    {{ guest_form.as_p }}
+    </div>
+  {% endfor %}
+    <input type="submit" value="Zaloguj" />
   </div>
-{% endfor %}
-</div>
+</form>
 {% endblock %}
 
 {% block js %}
