@@ -1,14 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
+<ul class="nav nav-tabs" role="tablist">
 {% for guest_form in formset %}
-<h3>{{ guest_form.instance }}</h3>
-<form method="post" action="">
-  {% csrf_token %}
-  {{ guest_form.as_p }}
-  <input type="submit" value="Zaloguj" />
-</form>
+  <li role="presentation" class="nav-item">
+    <a href="#tab-{{ guest_form.initial.id }}" data-toggle="tab" aria-controls="tab-{{ guest_form.initial.id }}" role="tab" data-toggle="tab" class="nav-link">
+      {{ guest_form.instance }}
+    </a>
+  </li>
 {% endfor %}
+</ul>
+<div class="tab-content">
+{% for guest_form in formset %}
+  <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
+    <form method="post" action="">
+      {% csrf_token %}
+      {{ guest_form.as_p }}
+      <input type="submit" value="Zaloguj" />
+    </form>
+  </div>
+{% endfor %}
+</div>
 {% endblock %}
 
 {% block js %}
@@ -40,6 +52,11 @@
 
 <script>
 $("#menu-home").addClass("active");
+</script>
+
+<script>
+$(".nav-tabs .nav-item a").first().addClass("active");
+$(".tab-content div").first().addClass("active");
 </script>
 
 {% endblock js %}

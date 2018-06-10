@@ -15,8 +15,8 @@ class Guest(models.Model):
         (MAYBE, 'Nie określono')
     )
     username = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField('Imię', max_length=30)
-    surname = models.CharField('Nazwisko', max_length=50)
+    name = models.CharField('Imię', max_length=30, editable=False)
+    surname = models.CharField('Nazwisko', max_length=50, editable=False)
     attending = models.CharField(
         'Będę na weselu', max_length=len(MAYBE), default=MAYBE, choices=ATTENDING_STATUSES
     )
