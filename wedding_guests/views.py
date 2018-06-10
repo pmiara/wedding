@@ -13,6 +13,8 @@ from .models import Guest
 class HomeView(View):
 
     def get(self, request):
+        if request.user.is_authenticated:
+            return redirect('guest')
         login_form = LoginForm()
         return render(request, 'home.html', {'login_form': login_form})
 
@@ -49,3 +51,15 @@ class GuestView(LoginRequiredMixin, View):
 def logout_view(request):
     logout(request)
     return redirect('home')
+
+
+class Wedding(TemplateView):
+    template_name = 'wedding.html'
+
+
+class Party(TemplateView):
+    template_name = 'party.html'
+
+
+class Story(TemplateView):
+    template_name = 'story.html'

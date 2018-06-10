@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Panel gościa</h1>
 {% for guest_form in formset %}
 <h3>{{ guest_form.instance }}</h3>
 <form method="post" action="">
@@ -38,4 +37,9 @@
     });
   });
 </script>
+
+<script>
+$("#menu-home").addClass("active");
+</script>
+
 {% endblock js %}
