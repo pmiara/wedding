@@ -7,7 +7,7 @@ from django.http import JsonResponse
 
 
 from .forms import LoginForm, GuestFormSet
-from .models import Guest
+from .models import Guest, Page
 
 
 class HomeView(View):
@@ -56,13 +56,20 @@ def logout_view(request):
     return redirect('home')
 
 
-class Wedding(TemplateView):
-    template_name = 'wedding.html'
+class PageView(View):
+
+    def get(self, request, page_url):
+        page = Page.objects.filter(url=page_url).first()
+        return render(request, 'page.html', {'page': page})
 
 
-class Party(TemplateView):
-    template_name = 'party.html'
+#class Wedding(TemplateView):
+#    template_name = 'wedding.html'
 
 
-class Story(TemplateView):
-    template_name = 'story.html'
+#class Party(TemplateView):
+#    template_name = 'party.html'
+
+
+#class Story(TemplateView):
+#    template_name = 'story.html'

@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+{{ page.header }}
+{{ page.content }}
 {% endblock %}
 
 {% block js %}
 <script>
-$("#menu-wedding").addClass("active");
+$("#menu-{{ page.url }}").addClass("active");
 </script>
 {% endblock js %}
