@@ -1,7 +1,6 @@
 @import '_reset';
 
-body {
-}
+$info-circle-img: '../info-circle.png';
 
 #home-header h1 {
   font-family: 'Berkshire Swash', cursive;
@@ -24,4 +23,16 @@ body {
 
 .container {
   margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.helpimg {
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: help;
+  height: 1.2em;
+}
+
+.tab-content {
+  padding: 30px;
 }

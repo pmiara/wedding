@@ -1,34 +1,37 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
+<div class="container">
 {% for dict in formset.errors %}
     {% for error in dict.values %}
         {{ error }}
     {% endfor %}
 {% endfor %}
 
-<ul class="nav nav-tabs" role="tablist">
-{% for guest_form in formset %}
-  <li role="presentation" class="nav-item">
-    <a href="#tab-{{ guest_form.initial.id }}" data-toggle="tab" aria-controls="tab-{{ guest_form.initial.id }}" role="tab" data-toggle="tab" class="nav-link">
-      {{ guest_form.instance }}
-    </a>
-  </li>
-{% endfor %}
-</ul>
-
-<form method="post" action="">
-{% csrf_token %}
-{{ formset.management_form }}
-  <div class="tab-content">
+  <ul class="nav nav-tabs" role="tablist">
   {% for guest_form in formset %}
-    <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
-    {{ guest_form.as_p }}
-    </div>
+    <li role="presentation" class="nav-item">
+      <a href="#tab-{{ guest_form.initial.id }}" data-toggle="tab" aria-controls="tab-{{ guest_form.initial.id }}" role="tab" data-toggle="tab" class="nav-link">
+        {{ guest_form.instance }}
+      </a>
+    </li>
   {% endfor %}
-    <input type="submit" value="Zaloguj" />
-  </div>
-</form>
+  </ul>
+
+  <form method="post" action="">
+  {% csrf_token %}
+  {{ formset.management_form }}
+    <div class="tab-content">
+    {% for guest_form in formset %}
+      <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
+      {{ guest_form.as_p }}
+      </div>
+    {% endfor %}
+      <input type="submit" value="Zaloguj" />
+    </div>
+  </form>
+</div>
 {% endblock %}
 
 {% block js %}
@@ -65,6 +68,15 @@ $("#menu-home").addClass("active");
 <script>
 $(".nav-tabs .nav-item a").first().addClass("active");
 $(".tab-content div").first().addClass("active");
+</script>
+
+<script>
+var helpimg = $('<img class="helpimg" src="{% static 'info-circle.png' %}"/>');
+helpimg.insertBefore(".helptext");
+$(".helptext").toggle();
+$(".tab-content").on("click", ".helpimg", function() {
+  $(this).next().toggle();
+});
 </script>
 
 {% endblock js %}

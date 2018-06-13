@@ -24,14 +24,20 @@ class Guest(models.Model):
         'Chcę jechać autobusem',
         default=False,
         help_text='''Zapewniamy dojazd spod kościoła na salę weselną zaraz po mszy
-        i z powrotem do Poznania na koniec wesela (koło 4 w nocy).'''
+                     i z powrotem do Poznania na koniec wesela (koło 4 w nocy).'''
     )
     is_vegetarian = models.BooleanField(
         'Preferuję dania wegetariańskie',
         default=False,
         help_text='Informacja ta pomoże nam przy wyborze menu'
     )
-    gift = models.CharField('Prezent', blank=True, max_length=50)
+    gift = models.CharField(
+        'Prezent',
+        blank=True,
+        max_length=50,
+        help_text='''W celu uniknięcia powtarzania się upominków,
+                     możesz wpisać tutaj swój prezent.'''
+    )
     comments = models.TextField('Dodatkowy komentarz', blank=True, max_length=200)
 
     @staticmethod
@@ -40,7 +46,6 @@ class Guest(models.Model):
         gift_scores = []
         for old_gift in gifts:
             gift_scores.append((old_gift, Guest.compare_gifts(old_gift, gift)))
-        print(gift_scores)
         suggestions = map(
             lambda x: x[0],
             filter(lambda x: x[1] > SIMILARITY_THRESHOLD, gift_scores)
@@ -54,7 +59,6 @@ class Guest(models.Model):
         scores = [
             1 - ed.eval(w1, w2) / max(len(w1), len(w2)) for w2 in gift2 for w1 in gift1
         ]
-        print(gift1, gift2, scores)
         return max(scores)
 
     @staticmethod
