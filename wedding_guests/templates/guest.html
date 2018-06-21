@@ -28,7 +28,7 @@
       {{ guest_form.as_p }}
       </div>
     {% endfor %}
-      <input type="submit" value="Zaloguj" />
+    <button class="btn my-2 my-sm-0" type="submit">Potwierdź</button>
     </div>
   </form>
 </div>
@@ -39,7 +39,7 @@
   function add_similar_gifts(input_field, gifts) {
     var suggestions = input_field.next();
     console.log(gifts);
-    suggestions.text(gifts);
+    suggestions.text("Podobne prezenty: " + gifts);
   }
 
   var gift_input_fields = $("input[id^=id_form-][id$=gift]");

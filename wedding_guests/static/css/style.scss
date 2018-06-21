@@ -36,3 +36,18 @@ $info-circle-img: '../info-circle.png';
 .tab-content {
   padding: 30px;
 }
+
+.tab-pane textarea {
+  width: 400px;
+  height: 80px;
+}
+
+.tab-pane label {
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.suggestions {
+  margin-left: 10px;
+  
+}

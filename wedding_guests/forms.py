@@ -9,4 +9,8 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='Hasło', widget=forms.PasswordInput)
 
 
-GuestFormSet = forms.modelformset_factory(Guest, exclude=['username'], extra=0)
+GuestFormSet = forms.modelformset_factory(
+    Guest,
+    exclude=['username', 'name', 'surname'],
+    extra=0
+)
