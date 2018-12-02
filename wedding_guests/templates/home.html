@@ -7,29 +7,27 @@
   <h1>Ślub Magdy i Piotrka, 27.04.2019</h1>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-5">
-      <h3>Potwierdź swoje przybycie</h3>
-      W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego potwierdzenia przybycia, możesz również podać kilka przydatnych dla nas informacji.
-      <form method="post" action="" id="login_form">
-        {% for error in login_form.non_field_errors %}
-        <p class="alert alert-warning">{{ error }}</p>
-        {% endfor %}
-        {% csrf_token %}
-        {% for field in login_form.visible_fields %}
-          <div class="form-group row">
-            <div class="col-sm-3">{{ field.label_tag }}</div>
-            {% render_field field class="form-control col-sm-9" %}
-          </div>
-        {% endfor %}
-        <button type="submit" class="btn btn-default">Zaloguj</button>
-      </form>
-    </div>
-    <div class="col-md-7">
-      <img id="heart" src="{% static 'serce.png' %}" />
-    </div>
+<div class="row">
+  <div class="d-sm-none d-md-block col-lg-2" style="background-color: red"></div>
+  <div class="col-md-8">
+    <h3>Potwierdź swoje przybycie</h3>
+    W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego potwierdzenia przybycia, możesz również podać kilka przydatnych dla nas informacji.
+    <form method="post" action="" id="login_form">
+      {% for error in login_form.non_field_errors %}
+      <p class="alert alert-warning">{{ error }}</p>
+      {% endfor %}
+      {% csrf_token %}
+      {% for field in login_form.visible_fields %}
+        <div class="form-group row">
+          <div class="col-sm-3">{{ field.label_tag }}</div>
+          {% render_field field class="form-control col-sm-9" %}
+        </div>
+      {% endfor %}
+      <button type="submit" class="btn btn-default">Zaloguj</button>
+    </form>
+    <img id="heart" src="{% static 'serce.png' %}" />
   </div>
+  <div class="d-sm-none d-md-block col-lg-2" style="background-color: red"></div>
 </div>
 {% endblock %}
 
