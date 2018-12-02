@@ -39,17 +39,22 @@
       {% endif %}
     </div>
   </nav>
+  <div class="container-fluid">
   <div class="row">
-    <div class="d-sm-none d-lg-block col-lg-2" style="background-color: red"></div>
+    <div class="img_column d-none d-lg-block col-lg-2">
+      <img src="{% static 'images/magda.png' %}">
+    </div>
     <div class="col-lg-8 col-md-12">
       <div class="container">
       {% block content %}
       {% endblock content %}
       </div>
     </div>
-    <div class="d-sm-none d-lg-block col-lg-2" style="background-color: red"></div>
+    <div class="img_column d-none d-lg-block col-lg-2">
+      <img src="{% static 'images/piotrek.png' %}">
+    </div>
   </div>
-
+</div>
 {% block js %}
 {% endblock js %}
 </body>
