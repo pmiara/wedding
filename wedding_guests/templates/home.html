@@ -25,7 +25,7 @@
       {% endfor %}
       <button type="submit" class="btn btn-default">Zaloguj</button>
     </form>
-    <img id="heart" src="{% static 'serce.png' %}" />
+    <div id="countdown"></div>
   </div>
   <div class="d-sm-none d-md-block col-lg-2" style="background-color: red"></div>
 </div>
@@ -34,5 +34,13 @@
 {% block js %}
 <script>
 $("#menu-home").addClass("active");
+</script>
+<div id="getting-started"></div>
+<script type="text/javascript">
+  $("#countdown").countdown("2019/04/27", function(event) {
+    $(this).text(
+      event.strftime('%D days %H:%M:%S')
+    );
+  });
 </script>
 {% endblock js %}
