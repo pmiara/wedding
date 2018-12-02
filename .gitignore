@@ -89,3 +89,6 @@ local_settings.py
 db.sqlite3
 
 .sass-cache/
+**/static/css/*.css
+**/static/css/*.css.map
+!**/static/css/*.scss
