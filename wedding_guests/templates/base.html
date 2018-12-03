@@ -26,10 +26,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav mr-auto">
-      {% menu_pages as pages %}
-      {% for page in pages %}
-        <a class="nav-item nav-link" href="{% url 'page' page_url=page.url %}" id="menu-{{ page.url }}">{{ page.name }}</a>
-      {% endfor %}
+        <a class="nav-item nav-link" href="{% url 'home' %}" id="menu-home">Strona główna</a>
+        <a class="nav-item nav-link" href="{% url 'wedding' %}" id="menu-wedding">Ślub</a>
+        <a class="nav-item nav-link" href="{% url 'wedding_party' %}" id="menu-wedding_party">Wesele</a>
+        <a class="nav-item nav-link" href="{% url 'accommodation' %}" id="menu-accommodation">Nocleg</a>
       </div>
       {% if user.is_authenticated %}
       <a href="{% url 'logout' %}">

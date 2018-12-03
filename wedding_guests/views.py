@@ -56,20 +56,13 @@ def logout_view(request):
     return redirect('home')
 
 
-class PageView(View):
-
-    def get(self, request, page_url):
-        page = Page.objects.filter(url=page_url).first()
-        return render(request, 'page.html', {'page': page})
+class Wedding(TemplateView):
+    template_name = 'wedding.html'
 
 
-#class Wedding(TemplateView):
-#    template_name = 'wedding.html'
+class WeddingParty(TemplateView):
+    template_name = 'wedding_party.html'
 
 
-#class Party(TemplateView):
-#    template_name = 'party.html'
-
-
-#class Story(TemplateView):
-#    template_name = 'story.html'
+class Accommodation(TemplateView):
+    template_name = 'accommodation.html'
