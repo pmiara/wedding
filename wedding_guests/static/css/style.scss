@@ -9,7 +9,6 @@ $info-circle-img: '../info-circle.png';
 
 #home-header h1 {
   font-size: 5em;
-  margin-top: 60px;
 }
 
 #home-header h3 {
@@ -17,8 +16,16 @@ $info-circle-img: '../info-circle.png';
   margin-top: -15px;
 }
 
-.navbar {
-  font-family: 'Berkshire Swash', cursive;
+.navbar-nav {
+  font-family: 'Montserrat';
+  width: 100%;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.navbar-nav .nav-link {
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
 }
 
 #login_form {
@@ -26,7 +33,6 @@ $info-circle-img: '../info-circle.png';
 }
 
 .container {
-  margin-top: 60px;
   margin-bottom: 60px;
 }
 
