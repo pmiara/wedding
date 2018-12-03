@@ -1,10 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 {% load widget_tweaks %}
+{% load i18n %}
 
 {% block content %}
 <div id="home-container">
-  <h3>Zapraszamy na nasz ślub i wesele!</h3>
+  <h3>{% trans 'Zapraszamy na nasz ślub i wesele!' %}</h3>
   W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego potwierdzenia przybycia, możesz również podać kilka przydatnych dla nas informacji.
   <form method="post" action="" id="login_form">
     {% for error in login_form.non_field_errors %}
