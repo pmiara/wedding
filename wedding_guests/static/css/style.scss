@@ -2,11 +2,19 @@
 
 $info-circle-img: '../info-circle.png';
 
-#home-header h1 {
-  font-family: 'Berkshire Swash', cursive;
-  font-size: 4em;
+#home-header {
+  font-family: 'Montserrat';
   text-align: center;
+}
+
+#home-header h1 {
+  font-size: 5em;
   margin-top: 60px;
+}
+
+#home-header h3 {
+  font-size: 2em;
+  margin-top: -15px;
 }
 
 .navbar {
