@@ -25,20 +25,11 @@
       <button type="submit" class="btn btn-default">Zaloguj</button>
     </div>
   </form>
-  <div id="countdown"></div>
 </div>
 {% endblock %}
 
 {% block js %}
 <script>
 $("#menu-home").addClass("active");
-</script>
-<div id="getting-started"></div>
-<script type="text/javascript">
-  $("#countdown").countdown("2019/04/27", function(event) {
-    $(this).text(
-      event.strftime('%D days %H:%M:%S')
-    );
-  });
 </script>
 {% endblock js %}
