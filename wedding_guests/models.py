@@ -69,6 +69,12 @@ class Guest(models.Model):
         return '{} {}'.format(self.name, self.surname)
 
 
+class Gift(models.Model):
+    name = models.CharField('Nazwa', max_length=100)
+    is_reserved = models.BooleanField('Zarezerwowany', default=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+
+
 class Page(models.Model):
     name = models.CharField('Nazwa', max_length=30)
     header = models.CharField('Nagłówek', max_length=100)
