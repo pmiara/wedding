@@ -6,7 +6,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 
 
-from .forms import LoginForm, GuestFormSet
+from .forms import LoginForm, GuestFormSet, GiftForm
 from .models import Guest, Page
 
 
@@ -38,7 +38,8 @@ class GuestView(LoginRequiredMixin, View):
     def get(self, request):
         guests = Guest.objects.filter(username=request.user)
         formset = GuestFormSet(queryset=guests)
-        return render(request, 'guest.html', {'formset': formset})
+        gift_form = GiftForm()
+        return render(request, 'guest.html', {'formset': formset, 'gift_form': gift_form})
 
     def post(self, request):
         formset = GuestFormSet(request.POST)
