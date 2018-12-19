@@ -28,6 +28,8 @@ class GiftForm(forms.Form):
     gifts = forms.MultipleChoiceField()
 
     def __init__(self, *args, **kwargs):
+        user = kwargs.pop('user', None)
         super(GiftForm, self).__init__(*args, **kwargs)
         self.fields['gifts'].widget = CheckboxSelectMultiple()
         self.fields['gifts'].choices = list(map(lambda g: (g.id, g.name), Gift.objects.all()))
+        self.fields['gifts'].initial = list(map(lambda g: g.id, Gift.objects.filter(user=user)))

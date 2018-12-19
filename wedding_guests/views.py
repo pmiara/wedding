@@ -7,7 +7,7 @@ from django.http import JsonResponse
 
 
 from .forms import LoginForm, GuestFormSet, GiftForm
-from .models import Guest, Page
+from .models import Guest, Page, Gift
 
 
 class HomeView(View):
@@ -38,13 +38,17 @@ class GuestView(LoginRequiredMixin, View):
     def get(self, request):
         guests = Guest.objects.filter(username=request.user)
         formset = GuestFormSet(queryset=guests)
-        gift_form = GiftForm()
+        gift_form = GiftForm(user=request.user)
         return render(request, 'guest.html', {'formset': formset, 'gift_form': gift_form})
 
     def post(self, request):
         formset = GuestFormSet(request.POST)
-        if formset.is_valid():
+        gift_form = GiftForm(request.POST, user=request.user)
+        if formset.is_valid() and gift_form.is_valid():
             formset.save()
+            chosen_gift_ids = gift_form.cleaned_data['gifts']
+            Gift.objects.filter(user=request.user).update(user=None)
+            Gift.objects.filter(id__in=chosen_gift_ids).update(user=request.user)
         return redirect('guest')
 
     def validate_gift(request):
