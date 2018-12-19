@@ -17,6 +17,11 @@
       </a>
     </li>
   {% endfor %}
+    <li role="presentation" class="ml-auto nav-item" id="gifts-nav-tab">
+      <a href="#tab-gifts" data-toggle="tab" aria-controls="tab-gifts" role="tab" data-toggle="tab" class="nav-link">
+        Wybór prezentów
+      </a>
+    </li>
   </ul>
 
   <form method="post" action="">
@@ -28,8 +33,10 @@
       {{ guest_form.as_p }}
       </div>
     {% endfor %}
+      <div class="tab-pane" id="tab-gifts">
+      {{ gift_form.as_p }}
+      </div>
     </div>
-    {{ gift_form.as_p }}
     <button class="btn my-2 my-sm-0" type="submit">Potwierdź</button>
   </form>
 </div>
