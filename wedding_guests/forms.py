@@ -1,6 +1,6 @@
 from django import forms
 
-from .models import Guest
+from .models import Guest, Gift
 
 
 class LoginForm(forms.Form):
@@ -14,3 +14,20 @@ GuestFormSet = forms.modelformset_factory(
     exclude=['username', 'name', 'surname'],
     extra=0
 )
+
+class GiftForm(forms.ModelForm):
+    class Meta:
+        model = Gift
+        fields = ['is_reserved']
+
+
+from django.forms.widgets import CheckboxSelectMultiple
+
+
+class GiftForm(forms.Form):
+    gifts = forms.MultipleChoiceField()
+
+    def __init__(self, *args, **kwargs):
+        super(GiftForm, self).__init__(*args, **kwargs)
+        self.fields['gifts'].widget = CheckboxSelectMultiple()
+        self.fields['gifts'].choices = list(map(lambda g: (g.id, g.name), Gift.objects.all()))
