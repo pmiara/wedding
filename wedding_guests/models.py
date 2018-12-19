@@ -74,6 +74,9 @@ class Gift(models.Model):
     is_reserved = models.BooleanField('Zarezerwowany', default=False)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Page(models.Model):
     name = models.CharField('Nazwa', max_length=30)
