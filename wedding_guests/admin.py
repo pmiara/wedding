@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Guest, Page
+from .models import Guest, Page, Gift
 
 
 class GuestAdmin(admin.ModelAdmin):
@@ -9,3 +9,4 @@ class GuestAdmin(admin.ModelAdmin):
 
 admin.site.register(Guest, GuestAdmin)
 admin.site.register(Page)
+admin.site.register(Gift)
