@@ -35,6 +35,12 @@
     {% endfor %}
       <div class="tab-pane" id="tab-gifts">
       {{ gift_form.as_p }}
+      {% if gift_form.taken_gifts %}
+        <h6>Zarezerwowane prezenty:</h6>
+        {% for gift in gift_form.taken_gifts %}
+        <p>{{ gift }}</p>
+        {% endfor %}
+      {% endif %}
       </div>
     </div>
     <button class="btn my-2 my-sm-0" type="submit">Potwierdź</button>
