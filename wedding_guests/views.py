@@ -48,10 +48,6 @@ class RSVPView(LoginRequiredMixin, View):
             Gift.objects.filter(id__in=chosen_gift_ids).update(user=request.user)
         return redirect('rsvp')
 
-    def validate_gift(request):
-        similar_gifts = Guest.get_similar_gifts(request.GET.get('gift'))
-        return JsonResponse(similar_gifts, safe=False)
-
 
 def logout_view(request):
     logout(request)

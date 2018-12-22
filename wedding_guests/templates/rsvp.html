@@ -44,32 +44,6 @@
 
 {% block js %}
 <script>
-  function add_similar_gifts(input_field, gifts) {
-    var suggestions = input_field.next();
-    console.log(gifts);
-    suggestions.text("Podobne prezenty: " + gifts);
-  }
-
-  var gift_input_fields = $("input[id^=id_form-][id$=gift]");
-  gift_input_fields.after('<span class="suggestions"></span>');
-
-  gift_input_fields.change(function () {
-    var input_field = $(this);
-    var gift = $(this).val();
-    $.ajax({
-      url: '/ajax/gift/',
-      data: {
-        'gift': gift
-      },
-      dataType: 'json',
-      success: function (gifts) {
-        add_similar_gifts(input_field, gifts);
-      }
-    });
-  });
-</script>
-
-<script>
 $("#menu-rsvp").addClass("active");
 </script>
 
@@ -86,5 +60,4 @@ $(".tab-content").on("click", ".helpimg", function() {
   $(this).next().toggle();
 });
 </script>
-
 {% endblock js %}
