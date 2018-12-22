@@ -11,11 +11,9 @@
       <a class="nav-item nav-link" href="{% url 'wedding' %}" id="menu-wedding">Ślub</a>
       <a class="nav-item nav-link" href="{% url 'wedding_party' %}" id="menu-wedding-party">Wesele</a>
       <a class="nav-item nav-link" href="{% url 'accommodation' %}" id="menu-accommodation">Nocleg</a>
+      {% if user.is_authenticated %}
+      <a class="nav-item nav-link" href="{% url 'logout' %}">Wyloguj</a>
+      {% endif %}
     </div>
-    {% if user.is_authenticated %}
-    <a href="{% url 'logout' %}">
-      <button class="btn my-2 my-sm-0" type="text">Wyloguj</button>
-    </a>
-    {% endif %}
   </div>
 </nav>
