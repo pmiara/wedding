@@ -30,13 +30,13 @@ class HomeView(View):
         return render(request, 'home.html', {'login_form': login_form})
 
 
-class GuestView(LoginRequiredMixin, View):
+class RSVPView(LoginRequiredMixin, View):
 
     def get(self, request):
         guests = Guest.objects.filter(username=request.user)
         formset = GuestFormSet(queryset=guests)
         gift_form = GiftForm(user=request.user)
-        return render(request, 'guest.html', {'formset': formset, 'gift_form': gift_form})
+        return render(request, 'rsvp.html', {'formset': formset, 'gift_form': gift_form})
 
     def post(self, request):
         formset = GuestFormSet(request.POST)
@@ -46,7 +46,7 @@ class GuestView(LoginRequiredMixin, View):
             chosen_gift_ids = gift_form.cleaned_data['gifts']
             Gift.objects.filter(user=request.user).update(user=None)
             Gift.objects.filter(id__in=chosen_gift_ids).update(user=request.user)
-        return redirect('guest')
+        return redirect('rsvp')
 
     def validate_gift(request):
         similar_gifts = Guest.get_similar_gifts(request.GET.get('gift'))
