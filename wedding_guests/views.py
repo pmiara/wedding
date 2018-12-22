@@ -13,8 +13,6 @@ from .models import Guest, Page, Gift
 class HomeView(View):
 
     def get(self, request):
-        if request.user.is_authenticated:
-            return redirect('guest')
         login_form = LoginForm()
         return render(request, 'home.html', {'login_form': login_form})
 
@@ -26,7 +24,6 @@ class HomeView(View):
             user = authenticate(username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('guest')
             else:
                 login_form.add_error(None, login_form.error_msg)
 
