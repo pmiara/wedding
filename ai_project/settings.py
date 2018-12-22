@@ -95,14 +95,9 @@ WSGI_APPLICATION = 'ai_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wedding_guests',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
         'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
-        }
+            'read_default_file': '/home/miara/wedding/ai_project/mysql.cnf',
+        },
     }
 }
 

@@ -92,3 +92,5 @@ db.sqlite3
 **/static/css/*.css
 **/static/css/*.css.map
 !**/static/css/*.scss
+
+**/ai_project/mysql.cnf
