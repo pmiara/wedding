@@ -76,15 +76,3 @@ class Gift(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Page(models.Model):
-    name = models.CharField('Nazwa', max_length=30)
-    header = models.CharField('Nagłówek', max_length=100)
-    content = models.TextField('Treść')
-    image = models.ImageField('Zdjęcie', blank=True)
-    order_no = models.IntegerField('Nr porządkowy')
-    url = models.CharField('Url', max_length=15)
-
-    def __str__(self):
-        return '({}) {}'.format(self.order_no, self.name)

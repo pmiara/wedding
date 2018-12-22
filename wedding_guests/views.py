@@ -7,7 +7,7 @@ from django.http import JsonResponse
 
 
 from .forms import LoginForm, GuestFormSet, GiftForm
-from .models import Guest, Page, Gift
+from .models import Guest, Gift
 
 
 class HomeView(View):
