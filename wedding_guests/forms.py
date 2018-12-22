@@ -1,4 +1,5 @@
 from django import forms
+from django.db.models import Q
 from django.forms.widgets import CheckboxSelectMultiple
 
 from .models import Guest, Gift
@@ -36,5 +37,6 @@ class GiftForm(forms.Form):
         user = kwargs.pop('user', None)
         super(GiftForm, self).__init__(*args, **kwargs)
         self.fields['gifts'].widget = CheckboxSelectMultiple()
-        self.fields['gifts'].choices = list(map(lambda g: (g.id, g.name), Gift.objects.all()))
+        self.fields['gifts'].choices = list(map(lambda g: (g.id, g.name), Gift.objects.filter(Q(user=None) | Q(user=user))))
         self.fields['gifts'].initial = list(map(lambda g: g.id, Gift.objects.filter(user=user)))
+        self.fields['gifts'].required = False
