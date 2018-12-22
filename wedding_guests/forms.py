@@ -1,4 +1,5 @@
 from django import forms
+from django.forms.widgets import CheckboxSelectMultiple
 
 from .models import Guest, Gift
 
@@ -9,19 +10,23 @@ class LoginForm(forms.Form):
     password = forms.CharField(label='Hasło', widget=forms.PasswordInput)
 
 
-GuestFormSet = forms.modelformset_factory(
-    Guest,
-    exclude=['username', 'name', 'surname'],
-    extra=0
-)
-
-class GiftForm(forms.ModelForm):
+class GuestForm(forms.ModelForm):
     class Meta:
-        model = Gift
-        fields = ['is_reserved']
+        model = Guest
+        exclude=['username', 'name', 'surname']
+
+    def as_my_p(self):
+        "Return this form rendered as HTML <p>s."
+        return self._html_output(
+            normal_row='<p%(html_class_attr)s data-toggle="tooltip" data-placement="left" title="%(help_text)s">%(label)s %(field)s</p>',
+            error_row='%s',
+            row_ender='</p>',
+            help_text_html='%s',
+            errors_on_separate_row=True,
+        )
 
 
-from django.forms.widgets import CheckboxSelectMultiple
+GuestFormSet = forms.modelformset_factory(Guest, form=GuestForm, extra=0)
 
 
 class GiftForm(forms.Form):

@@ -30,7 +30,7 @@
     <div class="tab-content">
     {% for guest_form in formset %}
       <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
-      {{ guest_form.as_p }}
+      {{ guest_form.as_my_p }}
       </div>
     {% endfor %}
       <div class="tab-pane" id="tab-gifts">
@@ -53,11 +53,8 @@ $(".tab-content div").first().addClass("active");
 </script>
 
 <script>
-var helpimg = $('<img class="helpimg" src="{% static 'info-circle.png' %}"/>');
-helpimg.insertBefore(".helptext");
-$(".helptext").toggle();
-$(".tab-content").on("click", ".helpimg", function() {
-  $(this).next().toggle();
-});
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
 </script>
 {% endblock js %}
