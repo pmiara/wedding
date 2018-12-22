@@ -5,6 +5,11 @@
 
 {% block content %}
 <div id="home-container">
+  {% if request.user.is_authenticated %}
+  <iframe id="ytplayer" type="text/html" width="640" height="360"
+    src="http://www.youtube.com/embed/W6iJkc-0MnE?cc_load_policy=1"></iframe>
+  <a href="{% url 'rsvp' %}"><button class="btn btn-success">Przejdź do formularza</button></a>
+  {% else %}
   <h3>{% trans 'Zapraszamy na nasz ślub i wesele!' %}</h3>
   W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego potwierdzenia przybycia, możesz również podać kilka przydatnych dla nas informacji.
   <form method="post" action="" id="login_form">
@@ -22,6 +27,7 @@
       <button type="submit" class="btn btn-default">Zaloguj</button>
     </div>
   </form>
+  {% endif %}
 </div>
 {% endblock %}
 
