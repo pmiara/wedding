@@ -94,3 +94,5 @@ db.sqlite3
 !**/static/css/*.scss
 
 **/ai_project/mysql.cnf
+**/ai_project/settings/dev_settings.py
+**/ai_project/settings/prod_settings.py
