@@ -89,9 +89,8 @@ local_settings.py
 db.sqlite3
 
 .sass-cache/
-**/static/css/*.css
-**/static/css/*.css.map
-!**/static/css/*.scss
+**/static/wedding_guests/css/*.css
+**/static/wedding_guests/css/*.css.map
 
 **/ai_project/mysql.cnf
 **/ai_project/settings/dev_settings.py
