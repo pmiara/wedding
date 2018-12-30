@@ -38,11 +38,11 @@
   {{ formset.management_form }}
     <div class="tab-content">
     {% for guest_form in formset %}
-      <div class="tab-pane" id="tab-{{ guest_form.initial.id }}">
+      <div class="tab-pane fade" id="tab-{{ guest_form.initial.id }}">
       {{ guest_form.as_my_p }}
       </div>
     {% endfor %}
-      <div class="tab-pane" id="tab-gifts">
+      <div class="tab-pane fade" id="tab-gifts">
       {{ gift_form.as_p }}
       {% if gift_form.taken_gifts %}
         <h6>Zarezerwowane prezenty:</h6>
@@ -71,5 +71,9 @@ $(".tab-content div").first().addClass("active");
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+</script>
+
+<script>
+$('.tab-pane').first().addClass('show active');
 </script>
 {% endblock js %}
