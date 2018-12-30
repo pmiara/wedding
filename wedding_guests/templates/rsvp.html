@@ -43,7 +43,8 @@
       </div>
     {% endfor %}
       <div class="tab-pane fade" id="tab-gifts">
-      {{ gift_form.as_p }}
+      <h6>Lista proponowanych prezentów</h6>
+      {{ gift_form.gifts }}
       {% if gift_form.taken_gifts %}
         <h6>Zarezerwowane prezenty:</h6>
         {% for gift in gift_form.taken_gifts %}
@@ -51,8 +52,8 @@
         {% endfor %}
       {% endif %}
       </div>
+      <button id="rsvp-button" class="btn btn-default btn-border" type="submit">Zapisz zmiany</button>
     </div>
-    <button class="btn btn-default btn-border" type="submit">Potwierdź</button>
   </form>
 </div>
 {% endblock %}

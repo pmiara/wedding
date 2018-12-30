@@ -112,6 +112,17 @@ body {
 .btn-border {
   border-color: #ced4da !important;
 }
+
+#id_gifts {
+  list-style-type: none;
+}
+
+#rsvp-button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
 .tab-pane textarea {
   display: block;
   max-width: 100%;
