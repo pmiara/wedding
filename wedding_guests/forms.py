@@ -17,7 +17,6 @@ class GuestForm(forms.ModelForm):
         exclude=['username', 'name', 'surname']
 
     def as_my_p(self):
-        "Return this form rendered as HTML <p>s."
         return self._html_output(
             normal_row='<p%(html_class_attr)s data-toggle="tooltip" data-placement="left" title="%(help_text)s">%(label)s %(field)s</p>',
             error_row='%s',
