@@ -1,6 +1,6 @@
 @import '_reset';
 
-$info-circle-img: '../info-circle.png';
+$small-width: 660px;
 
 body {
   font-family: 'Montserrat' !important;
@@ -13,6 +13,9 @@ body {
 
 #home-header h1 {
   font-size: 5em;
+  @media screen and (max-width: $small-width) {
+    font-size: 3em;
+  }
 }
 
 #home-header h3 {
@@ -31,7 +34,9 @@ body {
 .navbar-nav {
   width: 100%;
   justify-content: center;
-  margin-top: 60px;
+  @media screen and (min-width: $small-width) {
+    margin-top: 60px;
+  }
 }
 
 .navbar-nav .nav-link {
@@ -95,15 +100,23 @@ body {
 }
 
 #countdown {
-  font-size: 1.5em;
   text-align: center;
   flex-shrink: 0;
   padding-bottom: 2em;
+  font-size: 1.5em;
+  @media screen and (max-width: $small-width) {
+    font-size: 1em;
+  }
 }
 
 .btn-border {
   border-color: #ced4da !important;
 }
+.tab-pane textarea {
+  display: block;
+  max-width: 100%;
+}
+
 .embed-responsive {
   margin-bottom: 30px;
 }
