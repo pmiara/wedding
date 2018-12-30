@@ -5,12 +5,13 @@
 {% block content %}
 <div id="home-container">
   {% if request.user.is_authenticated %}
-  <div class="embed-responsive embed-responsive-16by9">
+  <p>Dla tych, którzy dotarli na naszą stronę, przygotowaliśmy małą niespodziankę! Zapraszamy do obejrzenia poniższego filmu:</p>
+  <div class="embed-responsive embed-responsive-16by9 m-4">
     <iframe id="ytplayer" type="text/html" class="embed-responsive"
       src="http://www.youtube.com/embed/W6iJkc-0MnE?cc_load_policy=1"></iframe>
   </div>
   <a href="{% url 'rsvp' %}">
-    <button class="btn btn-default btn-border">Przejdź do formularza</button>
+    <button class="btn btn-default btn-border">Przejdź do formularza RSVP</button>
   </a>
   {% else %}
   <h3>{% trans 'Zapraszamy na nasz ślub i wesele!' %}</h3>
