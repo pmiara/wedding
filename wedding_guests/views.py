@@ -37,7 +37,9 @@ class RSVPView(LoginRequiredMixin, View):
         guests = Guest.objects.filter(username=request.user)
         formset = GuestFormSet(queryset=guests)
         gift_form = GiftForm(user=request.user)
-        return render(request, 'rsvp.html', {'formset': formset, 'gift_form': gift_form})
+        gift_urls = {gift.id: gift.url for gift in Gift.objects.all()}
+        return render(request, 'rsvp.html',
+            {'formset': formset, 'gift_form': gift_form, 'gift_urls': gift_urls})
 
     def post(self, request):
         formset = GuestFormSet(request.POST)
