@@ -35,6 +35,7 @@ class Guest(models.Model):
 class Gift(models.Model):
     name = models.CharField('Nazwa', max_length=100)
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    url = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.name
