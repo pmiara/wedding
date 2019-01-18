@@ -23,3 +23,5 @@ urlpatterns = [
     path('pomidorki/', admin.site.urls),
     path('', include('wedding_guests.urls'))
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+handler404 = 'wedding_guests.views.handler404'

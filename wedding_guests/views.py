@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.views.generic.base import TemplateView
 from django.views import View
 from django.contrib.auth import authenticate, login, logout
@@ -71,5 +71,12 @@ class Commute(TemplateView):
 class Accommodation(TemplateView):
     template_name = 'accommodation.html'
 
+
 class Contact(TemplateView):
     template_name = 'contact.html'
+
+
+def handler404(request, exception, template_name="404.html"):
+    response = render_to_response(template_name)
+    response.status_code = 404
+    return response
