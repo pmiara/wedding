@@ -33,15 +33,17 @@ class HomeView(View):
 
 class RSVPView(LoginRequiredMixin, View):
 
-    def get(self, request):
+    def get(self, request, active_tab=0):
         guests = Guest.objects.filter(username=request.user)
         formset = GuestFormSet(queryset=guests)
         gift_form = GiftForm(user=request.user)
         gift_urls = {gift.id: gift.url for gift in Gift.objects.all()}
+        if 0 > active_tab or active_tab > len(formset):
+            active_tab = 0
         return render(request, 'rsvp.html',
-            {'formset': formset, 'gift_form': gift_form, 'gift_urls': gift_urls})
+            {'formset': formset, 'gift_form': gift_form, 'gift_urls': gift_urls, 'active_tab': active_tab})
 
-    def post(self, request):
+    def post(self, request, active_tab=0):
         formset = GuestFormSet(request.POST)
         gift_form = GiftForm(request.POST, user=request.user)
         if formset.is_valid() and gift_form.is_valid():
@@ -50,7 +52,7 @@ class RSVPView(LoginRequiredMixin, View):
             Gift.objects.filter(user=request.user).update(user=None)
             Gift.objects.filter(id__in=chosen_gift_ids).update(user=request.user)
             messages.success(request, 'Poprawna aktualizacja formularza')
-        return redirect('rsvp')
+        return redirect('rsvp_tab_active', active_tab)
 
 
 def logout_view(request):
