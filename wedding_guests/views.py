@@ -64,9 +64,12 @@ class Wedding(TemplateView):
     template_name = 'wedding.html'
 
 
-class WeddingParty(TemplateView):
-    template_name = 'wedding_party.html'
+class Commute(TemplateView):
+    template_name = 'commute.html'
 
 
 class Accommodation(TemplateView):
     template_name = 'accommodation.html'
+
+class Contact(TemplateView):
+    template_name = 'contact.html'
