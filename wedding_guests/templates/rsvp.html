@@ -48,7 +48,10 @@
       </div>
     {% endfor %}
       <div class="tab-pane fade" id="tab-gifts">
-        <h6>Lista proponowanych prezentów</h6>
+        <p>Poniżej zamieszczamy listę proponowanych prezentów. Jeśli macie inne pomysły albo nie ma już nic na liście, to nie krępujcie się sprawić nam coś innego.
+        Są tu także prezenty zarezerwowane już przez innych, co powinno zapobiec ich ewentualnemu zdublowaniu.
+        W sumie to nie musicie nam nic dawać. Największym prezentem dla nas jest Wasza obecność w tym wyjątkowym dla nas dniu :)</p>
+        <h5>Lista proponowanych prezentów:</h5>
       {% for gift_id, gift_name in gift_form.gifts.field.choices %}
         <label for="id-gift-{{ gift_id }}">
           <input id="id-gift-{{ gift_id }}"
@@ -67,9 +70,10 @@
         </label>
         <br>
       {% endfor %}
+      <br>
       {% if gift_form.taken_gifts %}
-        <h6>Zarezerwowane prezenty:</h6>
-        <ul>
+        <h5>Prezenty zarezerwowane przez innych:</h5>
+        <ul style="padding-left: 30px">
         {% for gift in gift_form.taken_gifts %}
           <li>
             {{ gift.name }}
