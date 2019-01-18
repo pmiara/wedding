@@ -70,8 +70,15 @@
       {% if gift_form.taken_gifts %}
         <h6>Zarezerwowane prezenty:</h6>
         <ul>
-        {% for gift_name in gift_form.taken_gifts %}
-          <li>{{ gift_name }}</li>
+        {% for gift in gift_form.taken_gifts %}
+          <li>
+            {{ gift.name }}
+            {% with gift_urls|get_item:gift.id as gift_url %}
+            {% if gift_url %}
+              <a href="{{ gift_url }}" target="_blank">(link)</a>
+            {% endif %}
+            {% endwith %}
+          </li>
         {% endfor %}
         </ul>
       {% endif %}

@@ -46,4 +46,4 @@ class GiftForm(forms.Form):
         self.fields['gifts'].choices = list(map(lambda g: (g.id, g.name), Gift.objects.filter(Q(user=None) | Q(user=user))))
         self.fields['gifts'].initial = list(map(lambda g: g.id, Gift.objects.filter(user=user)))
         self.fields['gifts'].required = False
-        self.taken_gifts = list(map(lambda g: g.name, Gift.objects.exclude(user=None).exclude(user=user)))
+        self.taken_gifts = list(Gift.objects.exclude(user=None).exclude(user=user))
