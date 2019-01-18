@@ -27,6 +27,7 @@ class Guest(models.Model):
         help_text='Informacja ta pomoże nam przy wyborze menu'
     )
     comments = models.TextField('Dodatkowy komentarz', blank=True, max_length=200)
+    is_accompanying_person = models.BooleanField(default=False)
 
     def __str__(self):
         return '{} {}'.format(self.name, self.surname)
