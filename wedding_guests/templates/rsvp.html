@@ -85,7 +85,6 @@
 {% block js %}
 <script>
 $("#menu-rsvp").addClass("active");
-</script>
 
 var activeTab = {{ active_tab }};
 $(".nav-tabs .nav-item a").eq(activeTab).addClass("active");
@@ -93,13 +92,13 @@ $(".tab-content div").eq(activeTab).addClass("active");
 $('.tab-pane').eq(activeTab).addClass('show active');
 
 
-<script>
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
-</script>
 
-<script>
-$('.tab-pane').first().addClass('show active');
+
+$(".alert").fadeTo(4000, 500).slideUp(500, function(){
+    $(".alert").slideUp(500);
+});
 </script>
 {% endblock js %}
