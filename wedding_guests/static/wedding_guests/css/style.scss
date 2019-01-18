@@ -131,3 +131,42 @@ body {
 .embed-responsive {
   margin-bottom: 30px;
 }
+
+.see-on-map {
+  display: block;
+}
+
+.wedding-row {
+  text-align: center;
+  margin-top: 35px;
+}
+
+.wedding-row .vertical-center {
+  position: relative;
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 1.5em;
+}
+
+.wedding-row img {
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.wedding-row:first-of-type img {
+  width: 70%;
+}
+
+#contact {
+  text-align: center;
+  padding-top: 30px;
+  & .row div {
+    margin-bottom: 30px;
+  }
+  & .row:last-child {
+    margin: 0 auto 0 auto;
+    width: 80%;
+  }
+}
