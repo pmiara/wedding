@@ -23,7 +23,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="img_column d-none d-lg-flex col-lg-2">
-        <img src="{% static 'wedding_guests/images/magda.png' %}">
+        <img id="magda-img">
       </div>
       <div id="middle-col" class="col-lg-8 col-md-12">
         <div id="nav-heading-content">
@@ -40,7 +40,7 @@
         <div id="countdown"></div>
       </div>
       <div class="img_column d-none d-lg-flex col-lg-2">
-        <img src="{% static 'wedding_guests/images/piotrek.png' %}">
+        <img id="piotrek-img">
       </div>
     </div>
   </div>
@@ -52,6 +52,13 @@
       event.strftime('%D dni %H godziny %M minut %S sekund')
     );
   });
+
+  function displayRandomImage(imageId, imagePath, imageCount) {
+    imageIndex = Math.floor(Math.random() * imageCount);
+    $('#' + imageId).attr("src", imagePath + imageIndex + '.png');
+  }
+  displayRandomImage("magda-img", "{% static 'wedding_guests/images/magda' %}", 2);
+  displayRandomImage("piotrek-img", "{% static 'wedding_guests/images/piotrek' %}", 2);
 </script>
 </body>
 </html>
