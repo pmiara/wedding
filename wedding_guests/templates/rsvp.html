@@ -60,13 +60,17 @@
             value="{{ gift_id }}"
             {% if gift_id in gift_form.gifts.field.initial %}
               checked=""
-            {% endif %}>
+            {% endif %}
+          >
           {{ gift_name }}
           {% with gift_urls|get_item:gift_id as gift_url %}
             {% if gift_url %}
             <a href="{{ gift_url }}" target="_blank">(link)</a>
             {% endif %}
           {% endwith %}
+          {% if gift_id in gift_form.gifts.field.initial %}
+          - zarezerwowane przez Ciebie
+          {% endif %}
         </label>
         <br>
       {% endfor %}
