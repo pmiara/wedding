@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-21 21:24+0100\n"
+"POT-Creation-Date: 2019-01-25 18:18+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgid "Enter a valid value."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/core/validators.py:102
-#: env/lib/python3.6/site-packages/django/forms/fields.py:659
+#: env/lib/python3.6/site-packages/django/forms/fields.py:657
 msgid "Enter a valid URL."
 msgstr ""
 
@@ -179,12 +179,12 @@ msgstr ""
 msgid "Null characters are not allowed."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/db/models/base.py:1110
+#: env/lib/python3.6/site-packages/django/db/models/base.py:1111
 #: env/lib/python3.6/site-packages/django/forms/models.py:752
 msgid "and"
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/db/models/base.py:1112
+#: env/lib/python3.6/site-packages/django/db/models/base.py:1113
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
 msgstr ""
@@ -453,12 +453,12 @@ msgid "Enter a whole number."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/forms/fields.py:395
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1128
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1126
 msgid "Enter a valid date."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/forms/fields.py:419
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1129
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1127
 msgid "Enter a valid time."
 msgstr ""
 
@@ -470,24 +470,24 @@ msgstr ""
 msgid "Enter a valid duration."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:472
+#: env/lib/python3.6/site-packages/django/forms/fields.py:471
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:533
+#: env/lib/python3.6/site-packages/django/forms/fields.py:531
 msgid "No file was submitted. Check the encoding type on the form."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:534
+#: env/lib/python3.6/site-packages/django/forms/fields.py:532
 msgid "No file was submitted."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:535
+#: env/lib/python3.6/site-packages/django/forms/fields.py:533
 msgid "The submitted file is empty."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:537
+#: env/lib/python3.6/site-packages/django/forms/fields.py:535
 #, python-format
 msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
@@ -495,34 +495,34 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:540
+#: env/lib/python3.6/site-packages/django/forms/fields.py:538
 msgid "Please either submit a file or check the clear checkbox, not both."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:601
+#: env/lib/python3.6/site-packages/django/forms/fields.py:599
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:763
-#: env/lib/python3.6/site-packages/django/forms/fields.py:853
+#: env/lib/python3.6/site-packages/django/forms/fields.py:761
+#: env/lib/python3.6/site-packages/django/forms/fields.py:851
 #: env/lib/python3.6/site-packages/django/forms/models.py:1272
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:854
-#: env/lib/python3.6/site-packages/django/forms/fields.py:969
+#: env/lib/python3.6/site-packages/django/forms/fields.py:852
+#: env/lib/python3.6/site-packages/django/forms/fields.py:967
 #: env/lib/python3.6/site-packages/django/forms/models.py:1271
 msgid "Enter a list of values."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:970
+#: env/lib/python3.6/site-packages/django/forms/fields.py:968
 msgid "Enter a complete value."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1187
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1185
 msgid "Enter a valid UUID."
 msgstr ""
 
@@ -1230,22 +1230,32 @@ msgid "Będę na weselu"
 msgstr "I will be at the wedding"
 
 #: wedding_guests/models.py:20
+msgid "Będę na poprawinach"
+msgstr ""
+
+#: wedding_guests/models.py:21
+#, fuzzy
+#| msgid "Więcej informacji w zakładce dojazd."
+msgid "Więcej informacji w zakładce Ślub i Wesele"
+msgstr "More information in the Commute tab."
+
+#: wedding_guests/models.py:24
 msgid "Chcę jechać busem"
 msgstr "I want to go by bus"
 
-#: wedding_guests/models.py:22
+#: wedding_guests/models.py:26
 msgid "Więcej informacji w zakładce dojazd."
 msgstr "More information in the Commute tab."
 
-#: wedding_guests/models.py:25
+#: wedding_guests/models.py:29
 msgid "Preferuję dania wegetariańskie"
 msgstr "I prefer vegetarian meals"
 
-#: wedding_guests/models.py:27
+#: wedding_guests/models.py:31
 msgid "Informacja ta pomoże nam przy wyborze menu"
 msgstr "This information will help us to pick the menu"
 
-#: wedding_guests/models.py:29
+#: wedding_guests/models.py:33
 msgid "Dodatkowy komentarz"
 msgstr "Additional comment"
 
@@ -1445,8 +1455,9 @@ msgid ""
 "Franciszka Serafickiego w Poznaniu. Kościół znajduje się na ulicy Garbary, "
 "przy Placu Bernardyńskim, zaraz obok liceum, w którym się poznaliśmy."
 msgstr ""
-"The wedding will take place on 27th April 2019 at 2pm. in Saint Francis' church in Poznań (Kościół św. Franciszka Serafickiego). "
-"The church is located on Garbary Street, next to a high school where we first met."
+"The wedding will take place on 27th April 2019 at 2pm. in Saint Francis' "
+"church in Poznań (Kościół św. Franciszka Serafickiego). The church is "
+"located on Garbary Street, next to a high school where we first met."
 
 #: wedding_guests/templates/wedding.html:23
 msgid ""
@@ -1455,9 +1466,20 @@ msgid ""
 "jednocześnie, nasze będzie w Sali Jaśminowej. Gdyby komuś się nudziło, to "
 "może pójść na wesele obok. Planujemy się bawić do 4:00."
 msgstr ""
-"The wedding party starts at about 4pm. in Jasmine Palace (Pałac Jaśminowy) in Batorowo, about 25km from the church. "
-"There will be two weddings at the same time, ours will be in Jasmin Hall (Sala Jaśminowa). "
-"In case you are bored you can go to the second one. We plan to finish the party at 4am."
+"The wedding party starts at about 4pm. in Jasmine Palace (Pałac Jaśminowy) "
+"in Batorowo, about 25km from the church. There will be two weddings at the "
+"same time, ours will be in Jasmin Hall (Sala Jaśminowa). In case you are "
+"bored you can go to the second one. We plan to finish the party at 4am."
+
+#: wedding_guests/templates/wedding.html:35
+msgid ""
+"Dzień po weselu zapraszamy członków rodziny na poprawiny. Odbędą się one na "
+"terenie Pałacu Jaśminowego, w namiocie bankietowym. Poprawiny będą miały "
+"charakter popołudniowego obiadku, nikt nie będzie już zmuszany do tańczenia. "
+"Przyjdźcie w strojach mniej formalnych niż na ślub."
+msgstr ""
+"Day after the wedding we invite family members to `poprawiny`."
+"It will be organised at the same place but different building - banquet tent."
 
 #: wedding_guests/views.py:54
 msgid "Poprawna aktualizacja formularza"
