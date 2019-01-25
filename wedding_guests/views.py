@@ -5,7 +5,7 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import JsonResponse
 from django.contrib import messages
-
+from django.utils.translation import gettext_lazy as _
 
 from .forms import LoginForm, GuestFormSet, GiftForm
 from .models import Guest, Gift
@@ -51,7 +51,7 @@ class RSVPView(LoginRequiredMixin, View):
             chosen_gift_ids = gift_form.cleaned_data['gifts']
             Gift.objects.filter(user=request.user).update(user=None)
             Gift.objects.filter(id__in=chosen_gift_ids).update(user=request.user)
-            messages.success(request, 'Poprawna aktualizacja formularza')
+            messages.success(request, _('Poprawna aktualizacja formularza'))
         return redirect('rsvp_tab_active', active_tab)
 
 

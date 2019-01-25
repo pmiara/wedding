@@ -1,5 +1,6 @@
 {% load static %}
 {% load i18n %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +50,7 @@
 <script type="text/javascript">
   $("#countdown").countdown("2019/04/27 14:00:00", function(event) {
     $(this).text(
-      event.strftime('%D dni %H godziny %M minut %S sekund')
+      event.strftime("{% trans '%D dni %H godziny %M minut %S sekund' %}")
     );
   });
 

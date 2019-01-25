@@ -1,32 +1,32 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.utils.translation import gettext_lazy as _
 
 
 class Guest(models.Model):
     YES, NO, MAYBE = 'Yes', 'No', 'Maybe'
     ATTENDING_STATUSES = (
-        (YES, 'Tak'),
-        (NO, 'Nie'),
-        (MAYBE, 'Nie określono')
+        (YES, _('Tak')),
+        (NO, _('Nie')),
+        (MAYBE, _('Nie określono'))
     )
     username = models.ForeignKey(User, on_delete=models.CASCADE)
-    name = models.CharField('Imię', max_length=30)
-    surname = models.CharField('Nazwisko', max_length=50)
+    name = models.CharField(_('Imię'), max_length=30)
+    surname = models.CharField(_('Nazwisko'), max_length=50)
     attending = models.CharField(
-        'Będę na weselu', max_length=len(MAYBE), default=MAYBE, choices=ATTENDING_STATUSES
+        _('Będę na weselu'), max_length=len(MAYBE), default=MAYBE, choices=ATTENDING_STATUSES
     )
     wants_bus = models.BooleanField(
-        'Chcę jechać autobusem',
+        _('Chcę jechać busem'),
         default=False,
-        help_text='''Zapewniamy dojazd spod kościoła na salę weselną zaraz po mszy
-                     i z powrotem do Poznania na koniec wesela (koło 4 w nocy).'''
+        help_text=_('Więcej informacji w zakładce dojazd.')
     )
     is_vegetarian = models.BooleanField(
-        'Preferuję dania wegetariańskie',
+        _('Preferuję dania wegetariańskie'),
         default=False,
-        help_text='Informacja ta pomoże nam przy wyborze menu'
+        help_text=_('Informacja ta pomoże nam przy wyborze menu')
     )
-    comments = models.TextField('Dodatkowy komentarz', blank=True, max_length=200)
+    comments = models.TextField(_('Dodatkowy komentarz'), blank=True, max_length=200)
     is_accompanying_person = models.BooleanField(default=False)
 
     def __str__(self):

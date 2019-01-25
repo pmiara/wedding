@@ -1,17 +1,18 @@
 {% extends "base.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <div class="row wedding-row">
   <div class="col-md-5">
     <img src="{% static 'wedding_guests/images/kosciol.jpg' %}" class="rounded"/>
     <a class="see-on-map" target="_blank" href="https://www.google.com/maps/dir//Kościół+Rzymskokatolicki+Pw.+św.+Franciszka+Serafickiego+(dawniej+Bernardynów),+Garbary+22,+61-854+Poznań/">
-      <button class="btn btn-default btn-border">Zobacz na mapie</button>
+	    <button class="btn btn-default btn-border">{% trans 'Zobacz na mapie' %}</button>
     </a>
   </div>
   <div class="col-md-7">
     <div class="vertical-center">
-    Ślub odbędzie się 27 kwietnia 2019 roku o godzinie 14:00 w kościele św. Franciszka Serafickiego w Poznaniu. Kościół znajduje się na ulicy Garbary, przy Placu Bernardyńskim, zaraz obok liceum, w którym się poznaliśmy.
+      {% trans 'Ślub odbędzie się 27 kwietnia 2019 roku o godzinie 14:00 w kościele św. Franciszka Serafickiego w Poznaniu. Kościół znajduje się na ulicy Garbary, przy Placu Bernardyńskim, zaraz obok liceum, w którym się poznaliśmy.' %}
     </div>
   </div>
 </div>
@@ -19,13 +20,13 @@
 <div class="row wedding-row">
   <div class="col-md-7">
     <div class="vertical-center">
-      Wesele planujemy rozpocząć około godziny 16:00 w Pałacu Jaśminowym w Batorowie, około 25km od kościoła. Na terenie pałacu odbędą się dwa wesela jednocześnie, nasze będzie w Sali Jaśminowej. Gdyby komuś się nudziło, to może pójść na wesele obok. Planujemy się bawić do 4:00.
+      {% trans 'Wesele planujemy rozpocząć około godziny 16:00 w Pałacu Jaśminowym w Batorowie, około 25km od kościoła. Na terenie pałacu odbędą się dwa wesela jednocześnie, nasze będzie w Sali Jaśminowej. Gdyby komuś się nudziło, to może pójść na wesele obok. Planujemy się bawić do 4:00.' %}
     </div>
   </div>
   <div class="col-md-5">
     <img src="{% static 'wedding_guests/images/jasminowy.jpg' %}" class="rounded"/>
     <a class="see-on-map" target="_blank" href="https://www.google.com/maps/dir//Pałac+Jaśminowy,+Zakrzewska+15,+62-080+Batorowo/">
-      <button class="btn btn-default btn-border">Zobacz na mapie</button>
+      <button class="btn btn-default btn-border">{% trans 'Zobacz na mapie' %}</button>
     </a>
   </div>
 </div>

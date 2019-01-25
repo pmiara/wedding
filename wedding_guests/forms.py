@@ -1,14 +1,15 @@
 from django import forms
 from django.db.models import Q
 from django.forms.widgets import CheckboxSelectMultiple
+from django.utils.translation import gettext_lazy as _
 
 from .models import Guest, Gift
 
 
 class LoginForm(forms.Form):
-    error_msg = 'Nieprawidłowe hasło lub login'
+    error_msg = _('Nieprawidłowe hasło lub login')
     username = forms.CharField(label='Login')
-    password = forms.CharField(label='Hasło', widget=forms.PasswordInput)
+    password = forms.CharField(label=_('Hasło'), widget=forms.PasswordInput)
 
 
 class GuestForm(forms.ModelForm):

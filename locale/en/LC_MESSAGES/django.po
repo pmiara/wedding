@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-03 20:26+0100\n"
+"POT-Creation-Date: 2019-01-21 21:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ai_project/settings.py:48
+#: ai_project/settings/base_settings.py:38
 msgid "Polish"
 msgstr ""
 
-#: ai_project/settings.py:49
+#: ai_project/settings/base_settings.py:39
 msgid "English"
 msgstr ""
 
@@ -59,7 +59,7 @@ msgid "Enter a valid value."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/core/validators.py:102
-#: env/lib/python3.6/site-packages/django/forms/fields.py:657
+#: env/lib/python3.6/site-packages/django/forms/fields.py:659
 msgid "Enter a valid URL."
 msgstr ""
 
@@ -179,12 +179,12 @@ msgstr ""
 msgid "Null characters are not allowed."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/db/models/base.py:1111
+#: env/lib/python3.6/site-packages/django/db/models/base.py:1110
 #: env/lib/python3.6/site-packages/django/forms/models.py:752
 msgid "and"
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/db/models/base.py:1113
+#: env/lib/python3.6/site-packages/django/db/models/base.py:1112
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
 msgstr ""
@@ -453,12 +453,12 @@ msgid "Enter a whole number."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/forms/fields.py:395
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1126
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1128
 msgid "Enter a valid date."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/forms/fields.py:419
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1127
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1129
 msgid "Enter a valid time."
 msgstr ""
 
@@ -470,24 +470,24 @@ msgstr ""
 msgid "Enter a valid duration."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:471
+#: env/lib/python3.6/site-packages/django/forms/fields.py:472
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:531
+#: env/lib/python3.6/site-packages/django/forms/fields.py:533
 msgid "No file was submitted. Check the encoding type on the form."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:532
+#: env/lib/python3.6/site-packages/django/forms/fields.py:534
 msgid "No file was submitted."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:533
+#: env/lib/python3.6/site-packages/django/forms/fields.py:535
 msgid "The submitted file is empty."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:535
+#: env/lib/python3.6/site-packages/django/forms/fields.py:537
 #, python-format
 msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
@@ -495,34 +495,34 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:538
+#: env/lib/python3.6/site-packages/django/forms/fields.py:540
 msgid "Please either submit a file or check the clear checkbox, not both."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:599
+#: env/lib/python3.6/site-packages/django/forms/fields.py:601
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:761
-#: env/lib/python3.6/site-packages/django/forms/fields.py:851
+#: env/lib/python3.6/site-packages/django/forms/fields.py:763
+#: env/lib/python3.6/site-packages/django/forms/fields.py:853
 #: env/lib/python3.6/site-packages/django/forms/models.py:1272
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:852
-#: env/lib/python3.6/site-packages/django/forms/fields.py:967
+#: env/lib/python3.6/site-packages/django/forms/fields.py:854
+#: env/lib/python3.6/site-packages/django/forms/fields.py:969
 #: env/lib/python3.6/site-packages/django/forms/models.py:1271
 msgid "Enter a list of values."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:968
+#: env/lib/python3.6/site-packages/django/forms/fields.py:970
 msgid "Enter a complete value."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1185
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1187
 msgid "Enter a valid UUID."
 msgstr ""
 
@@ -1197,10 +1197,268 @@ msgstr ""
 msgid "Connect, get help, or contribute"
 msgstr ""
 
-#: wedding_guests/templates/base.html:31
+#: wedding_guests/forms.py:10
+msgid "Nieprawidłowe hasło lub login"
+msgstr "Incorrect login or password"
+
+#: wedding_guests/forms.py:12
+msgid "Hasło"
+msgstr "Password"
+
+#: wedding_guests/models.py:9
+msgid "Tak"
+msgstr "Yes"
+
+#: wedding_guests/models.py:10
+msgid "Nie"
+msgstr "No"
+
+#: wedding_guests/models.py:11
+msgid "Nie określono"
+msgstr "Not decided yet"
+
+#: wedding_guests/models.py:14
+msgid "Imię"
+msgstr "Surname"
+
+#: wedding_guests/models.py:15
+msgid "Nazwisko"
+msgstr "Name"
+
+#: wedding_guests/models.py:17
+msgid "Będę na weselu"
+msgstr "I will be at the wedding"
+
+#: wedding_guests/models.py:20
+msgid "Chcę jechać busem"
+msgstr "I want to go by bus"
+
+#: wedding_guests/models.py:22
+msgid "Więcej informacji w zakładce dojazd."
+msgstr "More information in the Commute tab."
+
+#: wedding_guests/models.py:25
+msgid "Preferuję dania wegetariańskie"
+msgstr "I prefer vegetarian meals"
+
+#: wedding_guests/models.py:27
+msgid "Informacja ta pomoże nam przy wyborze menu"
+msgstr "This information will help us to pick the menu"
+
+#: wedding_guests/models.py:29
+msgid "Dodatkowy komentarz"
+msgstr "Additional comment"
+
+#: wedding_guests/templates/404.html:4
+msgid "Jeśli próbujesz nas hackować, to przestań!"
+msgstr "If you are trying to hack us, stop it!"
+
+#: wedding_guests/templates/base.html:33
 msgid "i"
-msgstr "and"
+msgstr "&"
+
+#: wedding_guests/templates/base.html:53
+#, python-format
+msgid "%%D dni %%H godziny %%M minut %%S sekund"
+msgstr "%%D days %%H hours %%M minutes %%S seconds"
+
+#: wedding_guests/templates/commute.html:5
+msgid "Ślub"
+msgstr "Wedding"
+
+#: wedding_guests/templates/commute.html:7
+msgid "Dokładny adres kościoła: ul. Garbary 22, 61-854 Poznań"
+msgstr "Church address: Garbary 22, 61-584 Poznań"
+
+#: wedding_guests/templates/commute.html:8
+msgid ""
+"Bezpośrednio przy kościele nie ma zbyt dużo miejsc parkingowych, dlatego "
+"wynajmiemy parking niedaleko kościoła. Więcej informacji znajdziecie na tej "
+"stronie bliżej daty ślubu."
+msgstr ""
+"There are not many parking spaces directly at the church, so we plan to rent "
+"a car park close to the church. More informations on the site closer to "
+"wedding day."
+
+#: wedding_guests/templates/commute.html:10
+msgid "Wesele"
+msgstr "Wedding party"
+
+#: wedding_guests/templates/commute.html:12
+msgid ""
+"Dokładny adres sali weselnej: Pałac Jaśminowy, ul. Zakrzewska 15, 62-080 "
+"Batorowo"
+msgstr "Wedding party address: Pałac Jaśminowy, Zakrzewska 15, 62-080 Batorowo"
+
+#: wedding_guests/templates/commute.html:13
+msgid "Samochód"
+msgstr "Car"
+
+#: wedding_guests/templates/commute.html:14
+msgid "Na terenie pałacu znajduje się parking, także tam nie ma problemu."
+msgstr "There is a car park in the palace area so there is no problem there."
+
+#: wedding_guests/templates/commute.html:15
+msgid "Autobus"
+msgstr "Bus"
+
+#: wedding_guests/templates/commute.html:16
+msgid ""
+"Planujemy wynająć autobus, który zawiezie gości spod kościoła, a po weselu "
+"przywiezie ich do centrum. Prosimy zaznaczać w formularzu chęć skorzystania "
+"z tej opcji, żebyśmy wiedzieli jak duże jest zapotrzebowanie. Dokładny "
+"przejazd busa będziemy planować bliżej daty wesela, gdy będzie wiadomo, kogo "
+"gdzie można by podwieźć."
+msgstr ""
+"We plan to rent a bus which will take guests from the church to the wedding "
+"party and after the wedding party it will take them to the city centre. "
+"Please let us know in the RSVP form if you are interested in this option so "
+"that we know for how many people we have to rent the bus. The exact route of "
+"the bus will be planned closer to the wedding day."
+
+#: wedding_guests/templates/contact.html:9
+msgid "Panna Młoda"
+msgstr "Bride"
+
+#: wedding_guests/templates/contact.html:15
+msgid "Pan Młody"
+msgstr "Groom"
+
+#: wedding_guests/templates/contact.html:22
+msgid ""
+"Będziemy wdzięczni za potwierdzenie przybycia na przyjęcie weselne do 1 "
+"kwietnia 2019 roku."
+msgstr ""
+"We will be grateful if you could confirm your arrival to the wedding party "
+"until the 1st of April 2019."
+
+#: wedding_guests/templates/contact.html:23
+msgid ""
+"W razie wszelkich wątpliwości, zgubienia loginu i hasła czy innych "
+"problemów, śmiało dzwońcie, a jeśli nie odbierzemy, to zostawcie wiadomość. "
+"Nie gryziemy :)"
+msgstr ""
+"In case of any doubts, lost credentials or other problems, don't hesitate to "
+"call us, and if we don't answer leave us a message. "
 
 #: wedding_guests/templates/home.html:8
+msgid ""
+"Dla tych, którzy dotarli na naszą stronę, przygotowaliśmy małą "
+"niespodziankę! Zapraszamy do obejrzenia poniższego filmu:"
+msgstr ""
+"For those who made it to our website we prepared a little suprise! Enjoy the "
+"video below:"
+
+#: wedding_guests/templates/home.html:11
+msgid "https://www.youtube.com/embed/W6iJkc-0MnE?cc_load_policy=1"
+msgstr ""
+"https://www.youtube.com/embed/W6iJkc-0MnE?"
+"cc_load_policy=1&cc_lang_pref=en&hl=en"
+
+#: wedding_guests/templates/home.html:14
+msgid "Przejdź do formularza RSVP"
+msgstr "Go to the RSVP form"
+
+#: wedding_guests/templates/home.html:17
 msgid "Zapraszamy na nasz ślub i wesele!"
 msgstr "Come to our wedding!"
+
+#: wedding_guests/templates/home.html:18
+msgid ""
+"W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu "
+"potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego "
+"potwierdzenia przybycia, możesz również podać kilka przydatnych dla nas "
+"informacji."
+msgstr ""
+"In the invitation you were given login and password that you can enter here "
+"in order to confirm your arrival to our wedding. Besides the confirmation "
+"you can also provide us with other useful information."
+
+#: wedding_guests/templates/home.html:31
+msgid "Zaloguj"
+msgstr "Log in"
+
+#: wedding_guests/templates/menu.html:9
+msgid "Strona główna"
+msgstr "Home"
+
+#: wedding_guests/templates/menu.html:13
+msgid "Ślub i wesele"
+msgstr "Wedding"
+
+#: wedding_guests/templates/menu.html:14
+msgid "Dojazd"
+msgstr "Commute"
+
+#: wedding_guests/templates/menu.html:15
+msgid "Kontakt"
+msgstr "Contact"
+
+#: wedding_guests/templates/menu.html:17
+msgid "Wyloguj"
+msgstr "Log out"
+
+#: wedding_guests/templates/rsvp.html:37
+msgid "Wybór prezentów"
+msgstr "Gifts selection"
+
+#: wedding_guests/templates/rsvp.html:52
+msgid ""
+"Poniżej zamieszczamy listę proponowanych prezentów. Jeśli macie inne pomysły "
+"albo nie ma już nic na liście, to nie krępujcie się sprawić nam coś innego.\n"
+"        Są tu także prezenty zarezerwowane już przez innych, co powinno "
+"zapobiec ich ewentualnemu zdublowaniu.\n"
+"\tW sumie to nie musicie nam nic dawać. Największym prezentem dla nas jest "
+"Wasza obecność w tym wyjątkowym dla nas dniu :)"
+msgstr ""
+"Below we put a list of proposed gifts. If you have other ideas or there is "
+"nothing left on the list, don't worry, you can get us something else. There "
+"are also gifts taken by others what should prevent them from being "
+"duplicated. For you who come from abroad - you don't have to give us "
+"anything! The greatest gift for us is that you'll be with us on this special "
+"day :)"
+
+#: wedding_guests/templates/rsvp.html:55
+msgid "Lista proponowanych prezentów:"
+msgstr "The list of proposed gifts:"
+
+#: wedding_guests/templates/rsvp.html:73
+msgid "- zarezerwowane przez Ciebie"
+msgstr "- taken by you"
+
+#: wedding_guests/templates/rsvp.html:80
+msgid "Prezenty zarezerwowane przez innych:"
+msgstr "Gifts taken by others:"
+
+#: wedding_guests/templates/rsvp.html:95
+msgid "Zapisz zmiany"
+msgstr "Save changes"
+
+#: wedding_guests/templates/wedding.html:10
+#: wedding_guests/templates/wedding.html:29
+msgid "Zobacz na mapie"
+msgstr "See on map"
+
+#: wedding_guests/templates/wedding.html:15
+msgid ""
+"Ślub odbędzie się 27 kwietnia 2019 roku o godzinie 14:00 w kościele św. "
+"Franciszka Serafickiego w Poznaniu. Kościół znajduje się na ulicy Garbary, "
+"przy Placu Bernardyńskim, zaraz obok liceum, w którym się poznaliśmy."
+msgstr ""
+"The wedding will take place on 27th April 2019 at 2pm. in Saint Francis' church in Poznań (Kościół św. Franciszka Serafickiego). "
+"The church is located on Garbary Street, next to a high school where we first met."
+
+#: wedding_guests/templates/wedding.html:23
+msgid ""
+"Wesele planujemy rozpocząć około godziny 16:00 w Pałacu Jaśminowym w "
+"Batorowie, około 25km od kościoła. Na terenie pałacu odbędą się dwa wesela "
+"jednocześnie, nasze będzie w Sali Jaśminowej. Gdyby komuś się nudziło, to "
+"może pójść na wesele obok. Planujemy się bawić do 4:00."
+msgstr ""
+"The wedding party starts at about 4pm. in Jasmine Palace (Pałac Jaśminowy) in Batorowo, about 25km from the church. "
+"There will be two weddings at the same time, ours will be in Jasmin Hall (Sala Jaśminowa). "
+"In case you are bored you can go to the second one. We plan to finish the party at 4am."
+
+#: wedding_guests/views.py:54
+msgid "Poprawna aktualizacja formularza"
+msgstr "The changes has been saved successfully"
