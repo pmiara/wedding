@@ -16,6 +16,10 @@ class Guest(models.Model):
     attending = models.CharField(
         _('Będę na weselu'), max_length=len(MAYBE), default=MAYBE, choices=ATTENDING_STATUSES
     )
+    attending_afters = models.CharField(
+        _('Będę na poprawinach'), max_length=len(MAYBE), default=MAYBE, choices=ATTENDING_STATUSES,
+        help_text=_('Więcej informacji w zakładce Ślub i Wesele')
+    )
     wants_bus = models.BooleanField(
         _('Chcę jechać busem'),
         default=False,
@@ -28,6 +32,7 @@ class Guest(models.Model):
     )
     comments = models.TextField(_('Dodatkowy komentarz'), blank=True, max_length=200)
     is_accompanying_person = models.BooleanField(default=False)
+    eligible_for_afters = models.BooleanField(default=False)
 
     def __str__(self):
         return '{} {}'.format(self.name, self.surname)
