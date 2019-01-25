@@ -15,7 +15,7 @@ class LoginForm(forms.Form):
 class GuestForm(forms.ModelForm):
     class Meta:
         model = Guest
-        exclude = ['username', 'is_accompanying_person']
+        exclude = ['username', 'is_accompanying_person', 'eligible_for_afters']
 
     def __init__(self, *args, **kwargs):
         super(GuestForm, self).__init__(*args, **kwargs)
@@ -23,6 +23,8 @@ class GuestForm(forms.ModelForm):
         if not guest.is_accompanying_person:
             del self.fields['name']
             del self.fields['surname']
+        if not guest.eligible_for_afters:
+            del self.fields['attending_afters']
 
     def as_my_p(self):
         return self._html_output(
