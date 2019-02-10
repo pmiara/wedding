@@ -97,3 +97,5 @@ db.sqlite3
 **/ai_project/settings/prod_settings.py
 
 /static/
+
+.idea
