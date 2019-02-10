@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-01-25 18:18+0100\n"
+"POT-Creation-Date: 2019-02-10 13:39+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgid "Enter a valid value."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/core/validators.py:102
-#: env/lib/python3.6/site-packages/django/forms/fields.py:657
+#: env/lib/python3.6/site-packages/django/forms/fields.py:659
 msgid "Enter a valid URL."
 msgstr ""
 
@@ -179,12 +179,12 @@ msgstr ""
 msgid "Null characters are not allowed."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/db/models/base.py:1111
+#: env/lib/python3.6/site-packages/django/db/models/base.py:1110
 #: env/lib/python3.6/site-packages/django/forms/models.py:752
 msgid "and"
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/db/models/base.py:1113
+#: env/lib/python3.6/site-packages/django/db/models/base.py:1112
 #, python-format
 msgid "%(model_name)s with this %(field_labels)s already exists."
 msgstr ""
@@ -453,12 +453,12 @@ msgid "Enter a whole number."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/forms/fields.py:395
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1126
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1128
 msgid "Enter a valid date."
 msgstr ""
 
 #: env/lib/python3.6/site-packages/django/forms/fields.py:419
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1127
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1129
 msgid "Enter a valid time."
 msgstr ""
 
@@ -470,24 +470,24 @@ msgstr ""
 msgid "Enter a valid duration."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:471
+#: env/lib/python3.6/site-packages/django/forms/fields.py:472
 #, python-brace-format
 msgid "The number of days must be between {min_days} and {max_days}."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:531
+#: env/lib/python3.6/site-packages/django/forms/fields.py:533
 msgid "No file was submitted. Check the encoding type on the form."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:532
+#: env/lib/python3.6/site-packages/django/forms/fields.py:534
 msgid "No file was submitted."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:533
+#: env/lib/python3.6/site-packages/django/forms/fields.py:535
 msgid "The submitted file is empty."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:535
+#: env/lib/python3.6/site-packages/django/forms/fields.py:537
 #, python-format
 msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
 msgid_plural ""
@@ -495,34 +495,34 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:538
+#: env/lib/python3.6/site-packages/django/forms/fields.py:540
 msgid "Please either submit a file or check the clear checkbox, not both."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:599
+#: env/lib/python3.6/site-packages/django/forms/fields.py:601
 msgid ""
 "Upload a valid image. The file you uploaded was either not an image or a "
 "corrupted image."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:761
-#: env/lib/python3.6/site-packages/django/forms/fields.py:851
+#: env/lib/python3.6/site-packages/django/forms/fields.py:763
+#: env/lib/python3.6/site-packages/django/forms/fields.py:853
 #: env/lib/python3.6/site-packages/django/forms/models.py:1272
 #, python-format
 msgid "Select a valid choice. %(value)s is not one of the available choices."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:852
-#: env/lib/python3.6/site-packages/django/forms/fields.py:967
+#: env/lib/python3.6/site-packages/django/forms/fields.py:854
+#: env/lib/python3.6/site-packages/django/forms/fields.py:969
 #: env/lib/python3.6/site-packages/django/forms/models.py:1271
 msgid "Enter a list of values."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:968
+#: env/lib/python3.6/site-packages/django/forms/fields.py:970
 msgid "Enter a complete value."
 msgstr ""
 
-#: env/lib/python3.6/site-packages/django/forms/fields.py:1185
+#: env/lib/python3.6/site-packages/django/forms/fields.py:1187
 msgid "Enter a valid UUID."
 msgstr ""
 
@@ -1476,10 +1476,10 @@ msgid ""
 "Dzień po weselu zapraszamy członków rodziny na poprawiny. Odbędą się one na "
 "terenie Pałacu Jaśminowego, w namiocie bankietowym. Poprawiny będą miały "
 "charakter popołudniowego obiadku, nikt nie będzie już zmuszany do tańczenia. "
-"Przyjdźcie w strojach mniej formalnych niż na ślub."
+"Przyjdźcie w strojach mniej formalnych."
 msgstr ""
-"Day after the wedding we invite family members to `poprawiny`."
-"It will be organised at the same place but different building - banquet tent."
+"Day after the wedding we invite family members to `poprawiny`. It will be "
+"organised at the same place but different building - banquet tent."
 
 #: wedding_guests/views.py:54
 msgid "Poprawna aktualizacja formularza"
