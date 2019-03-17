@@ -1219,11 +1219,11 @@ msgstr "Not decided yet"
 
 #: wedding_guests/models.py:14
 msgid "Imię"
-msgstr "Surname"
+msgstr "First name"
 
 #: wedding_guests/models.py:15
 msgid "Nazwisko"
-msgstr "Name"
+msgstr "Surname"
 
 #: wedding_guests/models.py:17
 msgid "Będę na weselu"
