@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-10 13:39+0100\n"
+"POT-Creation-Date: 2019-04-14 15:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1231,7 +1231,7 @@ msgstr "I will be at the wedding"
 
 #: wedding_guests/models.py:20
 msgid "Będę na poprawinach"
-msgstr ""
+msgstr "I will be at the after party"
 
 #: wedding_guests/models.py:21
 #, fuzzy
@@ -1282,49 +1282,82 @@ msgstr "Church address: Garbary 22, 61-584 Poznań"
 
 #: wedding_guests/templates/commute.html:8
 msgid ""
-"Bezpośrednio przy kościele nie ma zbyt dużo miejsc parkingowych, dlatego "
-"wynajmiemy parking niedaleko kościoła. Więcej informacji znajdziecie na tej "
-"stronie bliżej daty ślubu."
+"Parking na ulicy będzie darmowy (w soboty nie obowiązuje Strefa Płatnego "
+"Parkowania), jednak blisko kościoła nie ma zbyt dużo miejsc parkingowych. "
+"Zarezerwowaliśmy miejsca parkingowe na parkingu Za Bramką, niecałe 5 minut "
+"od kościoła (pierwsze pół godziny - bezpłatne, każda kolejna godzina - 3zł)."
 msgstr ""
-"There are not many parking spaces directly at the church, so we plan to rent "
-"a car park close to the church. More informations on the site closer to "
-"wedding day."
 
-#: wedding_guests/templates/commute.html:10
+#: wedding_guests/templates/commute.html:9
+msgid "Adres parkingu: Za Bramką 13, 61-854 Poznań"
+msgstr ""
+
+#: wedding_guests/templates/commute.html:11
 msgid "Wesele"
 msgstr "Wedding party"
 
-#: wedding_guests/templates/commute.html:12
+#: wedding_guests/templates/commute.html:13
 msgid ""
 "Dokładny adres sali weselnej: Pałac Jaśminowy, ul. Zakrzewska 15, 62-080 "
 "Batorowo"
 msgstr "Wedding party address: Pałac Jaśminowy, Zakrzewska 15, 62-080 Batorowo"
 
-#: wedding_guests/templates/commute.html:13
+#: wedding_guests/templates/commute.html:14
 msgid "Samochód"
 msgstr "Car"
 
-#: wedding_guests/templates/commute.html:14
+#: wedding_guests/templates/commute.html:15
 msgid "Na terenie pałacu znajduje się parking, także tam nie ma problemu."
 msgstr "There is a car park in the palace area so there is no problem there."
 
-#: wedding_guests/templates/commute.html:15
+#: wedding_guests/templates/commute.html:16
 msgid "Autobus"
 msgstr "Bus"
 
-#: wedding_guests/templates/commute.html:16
+#: wedding_guests/templates/commute.html:17
 msgid ""
-"Planujemy wynająć autobus, który zawiezie gości spod kościoła, a po weselu "
-"przywiezie ich do centrum. Prosimy zaznaczać w formularzu chęć skorzystania "
-"z tej opcji, żebyśmy wiedzieli jak duże jest zapotrzebowanie. Dokładny "
-"przejazd busa będziemy planować bliżej daty wesela, gdy będzie wiadomo, kogo "
-"gdzie można by podwieźć."
+"Wynajęliśmy autobus, który zawiezie gości spod kościoła na wesele, a po "
+"weselu przywiezie ich do centrum Poznania. Uwaga! Autobus odjedzie z ulicy "
+"Stawnej. Mamy już umówione osoby odpowiedzialne za poprowadzenie gości do "
+"autobusu. Powrót o godzinie 4. Autobus dojedzie na Rondo Kaponiera, a jeśli "
+"uda się dogadać z kierowcą busa, to może też zatrzyma się gdzieś jeszcze, "
+"np. na Rondzie Rataje."
 msgstr ""
-"We plan to rent a bus which will take guests from the church to the wedding "
-"party and after the wedding party it will take them to the city centre. "
-"Please let us know in the RSVP form if you are interested in this option so "
-"that we know for how many people we have to rent the bus. The exact route of "
-"the bus will be planned closer to the wedding day."
+"We rented a bus which is taking guests to the wedding party and after party "
+"to the city centre of Poznan. Attention! The bus is leaving from Stawna "
+"street. There will be guys who will take you there from the church."
+
+#: wedding_guests/templates/commute.html:18
+msgid ""
+"Chcemy, aby wszyscy na weselu się jak najlepiej bawili, dlatego mamy dobrą "
+"wiadomość dla kierowców nocujących w hotelu: autobus ma zaplanowany przejazd "
+"do hotelu na 3:30. Samochody zostawcie na parkingu przed pałacem, a rano "
+"ktoś będzie przyjeżdżał po kierowców :)"
+msgstr ""
+"The bus is also taking guests to the hotel. It's leaving about 3:30. On the "
+"next day, before the after party, we will be driving with people to the "
+"palace."
+
+#: wedding_guests/templates/commute.html:20
+msgid "Hotel"
+msgstr ""
+
+#: wedding_guests/templates/commute.html:22
+msgid ""
+"Dla części gości zarezerwowaliśmy pokoje w Hotelu Przylesie na noc z 27 na "
+"28 kwietnia. Hotel jest oddalony od pałacu o 5 minut drogi samochodem. "
+"Adres: ul. Bukowska 2a, 62-080 Sierosław."
+msgstr ""
+"We booked rooms in Hotel Przylesie. It's 5 minutes by car from the palace."
+
+#: wedding_guests/templates/commute.html:23
+msgid ""
+"Goście mogą się meldować w hotelu od godziny 12. W niedzielę śniadanie "
+"będzie wydawane od 7 do 11, a doba hotelowa kończy się o 13. Poprawiny będą "
+"trwały od 13 do 19."
+msgstr ""
+"People can be in the hotel from 12 on Saturday till 13 on Sunday. Breakfast "
+"will be served from 7 to 11. The after party is taking place from 13 to 19."
 
 #: wedding_guests/templates/contact.html:9
 msgid "Panna Młoda"
@@ -1374,6 +1407,14 @@ msgid "Zapraszamy na nasz ślub i wesele!"
 msgstr "Come to our wedding!"
 
 #: wedding_guests/templates/home.html:18
+msgid "Uwaga!"
+msgstr "Attention!"
+
+#: wedding_guests/templates/home.html:18
+msgid "Nowe informacje w zakładce Dojazd."
+msgstr "New information in the Commute tab."
+
+#: wedding_guests/templates/home.html:19
 msgid ""
 "W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu "
 "potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego "
@@ -1384,7 +1425,7 @@ msgstr ""
 "in order to confirm your arrival to our wedding. Besides the confirmation "
 "you can also provide us with other useful information."
 
-#: wedding_guests/templates/home.html:31
+#: wedding_guests/templates/home.html:32
 msgid "Zaloguj"
 msgstr "Log in"
 
@@ -1484,3 +1525,25 @@ msgstr ""
 #: wedding_guests/views.py:54
 msgid "Poprawna aktualizacja formularza"
 msgstr "The changes has been saved successfully"
+
+#~ msgid ""
+#~ "Bezpośrednio przy kościele nie ma zbyt dużo miejsc parkingowych, dlatego "
+#~ "wynajmiemy parking niedaleko kościoła. Więcej informacji znajdziecie na "
+#~ "tej stronie bliżej daty ślubu."
+#~ msgstr ""
+#~ "There are not many parking spaces directly at the church, so we plan to "
+#~ "rent a car park close to the church. More informations on the site closer "
+#~ "to wedding day."
+
+#~ msgid ""
+#~ "Planujemy wynająć autobus, który zawiezie gości spod kościoła, a po "
+#~ "weselu przywiezie ich do centrum. Prosimy zaznaczać w formularzu chęć "
+#~ "skorzystania z tej opcji, żebyśmy wiedzieli jak duże jest "
+#~ "zapotrzebowanie. Dokładny przejazd busa będziemy planować bliżej daty "
+#~ "wesela, gdy będzie wiadomo, kogo gdzie można by podwieźć."
+#~ msgstr ""
+#~ "We plan to rent a bus which will take guests from the church to the "
+#~ "wedding party and after the wedding party it will take them to the city "
+#~ "centre. Please let us know in the RSVP form if you are interested in this "
+#~ "option so that we know for how many people we have to rent the bus. The "
+#~ "exact route of the bus will be planned closer to the wedding day."

@@ -15,6 +15,7 @@
   </a>
   {% else %}
   <h3>{% trans 'Zapraszamy na nasz ślub i wesele!' %}</h3>
+  <h3>{% trans 'Uwaga!' %}<br>{% trans 'Nowe informacje w zakładce Dojazd.' %}</h3>
   {% trans 'W zaproszeniu dostałeś login i hasło, które możesz wpisać poniżej w celu potwierdzenia swojego przybycia na ślub i wesele. Oprócz samego potwierdzenia przybycia, możesz również podać kilka przydatnych dla nas informacji.' %}
   <form method="post" action="" id="login_form">
     {% for error in login_form.non_field_errors %}
